@@ -1,0 +1,5 @@
+Individual Licenses are located in the "THIRD_PARTY_LICENSES" folder
+
+Project: Simple-InGame-Visual-Programming-for-Unity
+Copyright (c) 2019 Daniel C. Menezes (https://github.com/danielcmcg)
+License: MIT (See DANIELMCG_LICENSE.txt)
