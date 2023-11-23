@@ -110,6 +110,7 @@ public class MainLoop
     public bool infiniteLoop;
     public bool end;
     private float waitTime;
+    private Dictionary<string, object> variables = new();
 
     public MainLoop(GameObject mainTarget, List<Function_> sequence_)
     {
