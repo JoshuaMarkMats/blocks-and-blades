@@ -149,6 +149,7 @@ public class SetFunction : Function_
 
     override public void Func(MainFunction mainFunction)
     {
+        Debug.Log("Setting variable " + variable + " to " + value);
         if (mainFunction.variables.ContainsKey(variable))
         {
             mainFunction.variables[variable] = value;
@@ -173,8 +174,9 @@ public class OutFunction : Function_
 
     public override void Func(MainFunction mainFunction)
     {
+        Debug.Log("Printing " + varName);
         if (mainFunction.variables.ContainsKey(varName))
-            mainFunction.outputDisplay.text = mainFunction.inputValue.ToString();
+            mainFunction.outputDisplay.text = mainFunction.variables[varName].ToString();
     }
 
 }
