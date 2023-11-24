@@ -12,7 +12,7 @@ public class UIDrop : MonoBehaviour, IDropHandler, IPointerClickHandler
     {
         EventSystem.current.currentSelectedGameObject.transform.parent = transform;
         var sizey = GetComponent<RectTransform>().rect.size.y;
-        int index = (int)((((transform.position.y+(sizey/2)) - Input.mousePosition.y))/35)+1;
+        int index = (int)(((transform.position.y+(sizey/2)) - Input.mousePosition.y)/35)+1;
         if(index <= 0)
         {
             index = 1;

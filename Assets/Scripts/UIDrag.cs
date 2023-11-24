@@ -32,7 +32,8 @@ public class UIDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerClic
         diffPosition = Input.mousePosition - startPosition;
         EventSystem.current.SetSelectedGameObject(gameObject);
         EventSystem.current.currentSelectedGameObject.transform.SetParent(canvas_.transform);
-        EventSystem.current.currentSelectedGameObject.transform.SetAsFirstSibling();
+        //EventSystem.current.currentSelectedGameObject.transform.SetAsFirstSibling();
+        EventSystem.current.currentSelectedGameObject.transform.SetSiblingIndex(1);
         Debug.Log("start drag " + gameObject.name);
     }
 
