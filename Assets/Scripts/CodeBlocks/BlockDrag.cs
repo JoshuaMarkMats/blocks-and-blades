@@ -1,15 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class UIDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerClickHandler, IPointerDownHandler
+public class BlockDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerClickHandler, IPointerDownHandler, IBeginDragHandler
 {
     Vector3 startPosition;
     Vector3 diffPosition;
     GameObject canvas_;
-    GameObject panelGhost;
+
+    private Function_ function;
+    private CanvasGroup canvasGroup;
+
+    private void Awake()
+    {
+        function = GetComponent<Function_>();
+        canvasGroup = GetComponent<CanvasGroup>();
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        canvasGroup.blocksRaycasts = false;
+
+        if (function.prevBlock != null)
+            function.prevBlock.nextBlock = null;
+
+        function.prevBlock = null;
+    }
 
     public void OnDrag(PointerEventData eventData)
     {
@@ -18,7 +35,7 @@ public class UIDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerClic
 
     public void OnEndDrag(PointerEventData eventData)
     {
-    
+        canvasGroup.blocksRaycasts=true;
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -32,15 +49,12 @@ public class UIDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerClic
         diffPosition = Input.mousePosition - startPosition;
         EventSystem.current.SetSelectedGameObject(gameObject);
         EventSystem.current.currentSelectedGameObject.transform.SetParent(canvas_.transform);
-        //EventSystem.current.currentSelectedGameObject.transform.SetAsFirstSibling();
-        EventSystem.current.currentSelectedGameObject.transform.SetSiblingIndex(1);
         Debug.Log("start drag " + gameObject.name);
     }
 
     void Start()
     {
         canvas_ = GameObject.Find("Canvas");
-        panelGhost = GameObject.Find("Panel ghost");
     }
 
     void Update()

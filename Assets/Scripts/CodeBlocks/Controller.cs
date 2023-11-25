@@ -24,12 +24,19 @@ public class Controller : MonoBehaviour
     List<Function_> sequence; //list of functions (type Functions_). The code sequence is read from here
     private int isPlaying;
 
+    public Function_ headBlock;
+
     MainFunction loop1;
-    
+
+    private void Awake()
+    {
+        //function = GetComponent<Function_>();
+    }
+
     public void Paly()
     {
         sequence.Clear();
-        sequence = TranslateCodeFromBlocks(transform.parent, sequence);
+        sequence = TranslateCodeFromBlocks(headBlock, sequence);
         
         loop1 = new MainFunction(inputDisplay, outputDisplay, sequence, 5);
         StartCoroutine(loop1.Play());
@@ -65,9 +72,9 @@ public class Controller : MonoBehaviour
     }
     
     //recursive parser function
-    private List<Function_> TranslateCodeFromBlocks(Transform parent, List<Function_> sequence_)
+    private List<Function_> TranslateCodeFromBlocks(Function_ block, List<Function_> sequence_)
     {
-        foreach (Transform child in parent)
+        /*foreach (Transform child in parent)
         {
             var functionName = child.name.Split('_'); //looks like a little face ^^
 
@@ -77,17 +84,21 @@ public class Controller : MonoBehaviour
                 switch (function)
                 {
                     case "Set":
-                        var setData = child.GetComponent<SetBlockData>();
-                        sequence_.Add(new SetFunction("SetFunction", setData.varName, setData.value));
+                        sequence_.Add(child.GetComponent<SetFunction>());
                         break;
                     case "Out":
-                        var outData = child.GetComponent<OutBlockData>();
-                        sequence_.Add(new OutFunction("OutFunction", outData.varName));
+                        sequence_.Add(child.GetComponent<OutFunction>());
                         break;
 
                 }
             }
-        }
+        }*/
+        Debug.Log("adding item");
+        sequence_.Add(block);
+        Debug.Log($"new sequence length is {sequence_.Count}");
+        if (block.nextBlock != null)
+            return TranslateCodeFromBlocks(block.nextBlock, sequence_);
+        
         
         return sequence_;
     }
@@ -104,13 +115,7 @@ public class MainFunction
     private float waitTime;
     public Dictionary<string, object> variables = new();
 
-    public int OutputDisplay
-    {
-        set
-        {
-            int valueToSet = value;
-        }
-    }
+    public Transform nextBlock;
 
     public MainFunction(TextMeshProUGUI inputDisplay, TextMeshProUGUI outputDisplay, List<Function_> sequence_, int inputValue)
     {
@@ -123,7 +128,7 @@ public class MainFunction
     }
     public IEnumerator Play()
     {
-        WaitForSeconds wait = new WaitForSeconds(waitTime);
+        WaitForSeconds wait = new(waitTime);
         this.end = false;
         foreach (Function_ fun in this.sequence_)
         {
@@ -135,65 +140,7 @@ public class MainFunction
     
 }
 
-public class SetFunction : Function_
-{
-    private string variable;
-    private int value;
 
-    public SetFunction(string ID, string variable, int value) : base(ID)
-    {
-        this.variable = variable;
-        this.value = value;
-        this.ID = ID;
-    }
 
-    override public void Func(MainFunction mainFunction)
-    {
-        Debug.Log("Setting variable " + variable + " to " + value);
-        if (mainFunction.variables.ContainsKey(variable))
-        {
-            mainFunction.variables[variable] = value;
-        }
-        else
-        {
-            mainFunction.variables.Add(variable, value);
-        }
 
-    }
-}
 
-public class OutFunction : Function_
-{
-    private string varName;
-
-    public OutFunction(string ID, string varName) : base(ID)
-    {
-        this.ID = ID;
-        this.varName = varName;
-    }
-
-    public override void Func(MainFunction mainFunction)
-    {
-        Debug.Log("Printing " + varName);
-        if (mainFunction.variables.ContainsKey(varName))
-            mainFunction.outputDisplay.text = mainFunction.variables[varName].ToString();
-    }
-
-}
-
-public class Function_
-{
-    public string ID;
-
-    //contructor for sinple functions
-    public Function_(string ID)
-    {
-        this.ID = ID;
-    }
-
-    public virtual void Func(MainFunction mainFunction)
-    {
-       
-    }
-
-}
