@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Function_ : MonoBehaviour 
+public class FunctionBlock : MonoBehaviour 
 {
-    public Function_ nextBlock;
-    public Function_ prevBlock;
+    public FunctionBlock nextBlock;
+    public FunctionBlock prevBlock;
 
     /*public Function_ NextBlock
     {
@@ -28,8 +28,15 @@ public class Function_ : MonoBehaviour
             prevBlock = value;
         }
     }*/
-
+    
+    //meat of the function called by controller
     public virtual void Func(MainFunction mainFunction)
+    {
+
+    }
+
+    //used to update value blocks of a function
+    public virtual void UpdateValues()
     {
 
     }

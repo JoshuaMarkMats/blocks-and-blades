@@ -9,12 +9,12 @@ public class BlockDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerD
     //Vector3 diffPosition;
     GameObject canvas_;
 
-    private Function_ function;
+    private FunctionBlock function;
     private CanvasGroup canvasGroup;
 
     private void Awake()
     {
-        function = GetComponent<Function_>();
+        function = GetComponent<FunctionBlock>();
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
@@ -43,9 +43,9 @@ public class BlockDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerD
         startPosition = transform.position;
         //diffPosition = Input.mousePosition - startPosition;
         EventSystem.current.SetSelectedGameObject(gameObject);
-        DragDropManager.Instance.lastSelected = transform;
+        CodeBlockManager.Instance.lastSelected = transform;
         EventSystem.current.currentSelectedGameObject.transform.SetParent(canvas_.transform);
-        Debug.Log("start drag " + gameObject.name);
+        //Debug.Log("start drag " + gameObject.name);
     }
 
     public void OnPointerUp(PointerEventData eventData)

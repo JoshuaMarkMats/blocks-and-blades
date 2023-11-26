@@ -21,10 +21,10 @@ public class Controller : MonoBehaviour
 {
     public delegate void FuntionsList();
     public TextMeshProUGUI inputDisplay, outputDisplay;
-    List<Function_> sequence; //list of functions (type Functions_). The code sequence is read from here
+    List<FunctionBlock> sequence; //list of functions (type Functions_). The code sequence is read from here
     private int isPlaying;
 
-    public Function_ headBlock;
+    public FunctionBlock headBlock;
 
     MainFunction loop1;
 
@@ -52,7 +52,7 @@ public class Controller : MonoBehaviour
     void Start()
     {
         isPlaying = 0; 
-        sequence = new List<Function_>();
+        sequence = new List<FunctionBlock>();
     }
     
     void Update()
@@ -72,7 +72,7 @@ public class Controller : MonoBehaviour
     }
     
     //recursive parser function
-    private List<Function_> TranslateCodeFromBlocks(Function_ block, List<Function_> sequence_)
+    private List<FunctionBlock> TranslateCodeFromBlocks(FunctionBlock block, List<FunctionBlock> sequence_)
     {
         /*foreach (Transform child in parent)
         {
@@ -93,9 +93,9 @@ public class Controller : MonoBehaviour
                 }
             }
         }*/
-        Debug.Log("adding item");
+        //Debug.Log("adding item");
         sequence_.Add(block);
-        Debug.Log($"new sequence length is {sequence_.Count}");
+        //Debug.Log($"new sequence length is {sequence_.Count}");
         if (block.nextBlock != null)
             return TranslateCodeFromBlocks(block.nextBlock, sequence_);
         
@@ -108,7 +108,7 @@ public class Controller : MonoBehaviour
 public class MainFunction
 {
     public TextMeshProUGUI inputDisplay, outputDisplay;
-    List<Function_> sequence_;
+    List<FunctionBlock> sequence_;
     public bool infiniteLoop;
     public bool end;
     public int inputValue = 10;
@@ -117,7 +117,7 @@ public class MainFunction
 
     public Transform nextBlock;
 
-    public MainFunction(TextMeshProUGUI inputDisplay, TextMeshProUGUI outputDisplay, List<Function_> sequence_, int inputValue)
+    public MainFunction(TextMeshProUGUI inputDisplay, TextMeshProUGUI outputDisplay, List<FunctionBlock> sequence_, int inputValue)
     {
         this.end = false;
         this.inputDisplay = inputDisplay;
@@ -130,7 +130,7 @@ public class MainFunction
     {
         WaitForSeconds wait = new(waitTime);
         this.end = false;
-        foreach (Function_ fun in this.sequence_)
+        foreach (FunctionBlock fun in this.sequence_)
         {
             fun.Func(this);
             yield return wait;
