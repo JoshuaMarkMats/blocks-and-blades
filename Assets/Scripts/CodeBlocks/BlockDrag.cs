@@ -5,20 +5,18 @@ using UnityEngine.EventSystems;
 
 public class BlockDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHandler, IBeginDragHandler, IPointerUpHandler
 {
-    Vector3 startPosition;
-    //Vector3 diffPosition;
-    GameObject canvas_;
+    protected GameObject canvas_;
 
     private FunctionBlock function;
     private CanvasGroup canvasGroup;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         function = GetComponent<FunctionBlock>();
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
+    public virtual void OnBeginDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = false;
 
@@ -28,24 +26,24 @@ public class BlockDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerD
         function.prevBlock = null;
     }
 
-    public void OnDrag(PointerEventData eventData)
+    public virtual void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;// - diffPosition;
+        transform.position = Input.mousePosition;
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    public virtual void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts=true;
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public virtual void OnPointerDown(PointerEventData eventData)
     {
-        startPosition = transform.position;
-        //diffPosition = Input.mousePosition - startPosition;
-        EventSystem.current.SetSelectedGameObject(gameObject);
+        EventSystem.current.SetSelectedGameObject(gameObject);       
+        transform.SetParent(canvas_.transform);
+        transform.SetAsLastSibling(); //we want this on rendered on top so put it at the bottom of list
+
+        //separate tracker for current object
         CodeBlockManager.Instance.lastSelected = transform;
-        EventSystem.current.currentSelectedGameObject.transform.SetParent(canvas_.transform);
-        //Debug.Log("start drag " + gameObject.name);
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -55,7 +53,7 @@ public class BlockDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerD
 
     void Start()
     {
-        canvas_ = GameObject.Find("Canvas");
+        canvas_ = GameObject.Find("Terminal");
     }
 
 }
