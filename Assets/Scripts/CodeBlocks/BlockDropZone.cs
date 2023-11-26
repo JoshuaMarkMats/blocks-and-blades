@@ -18,7 +18,7 @@ public class BlockDropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
-    public virtual void OnDrop(PointerEventData eventData)
+    public void OnDrop(PointerEventData eventData)
     {
         //get current object, return if it's a head type or if it isn't a FunctionBlock
         Transform currentObject = CodeBlockManager.Instance.lastSelected;
@@ -39,7 +39,7 @@ public class BlockDropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
         
     }
 
-    public virtual void OnPointerEnter(PointerEventData eventData)
+    public void OnPointerEnter(PointerEventData eventData)
     {
         GameObject currentSelected = EventSystem.current.currentSelectedGameObject;
         //return if nothing is selected

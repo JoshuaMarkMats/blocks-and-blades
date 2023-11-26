@@ -32,7 +32,7 @@ public class BlockSource : BlockDrag
 
     public override void OnPointerDown(PointerEventData eventData)
     {
-        currentBlock = Instantiate(blockPrefab, canvas_.transform, true);
+        currentBlock = Instantiate(blockPrefab, Input.mousePosition, transform.rotation, canvas_.transform);
 
         EventSystem.current.SetSelectedGameObject(currentBlock);       
         //currentBlock.transform.SetParent(canvas_.transform);

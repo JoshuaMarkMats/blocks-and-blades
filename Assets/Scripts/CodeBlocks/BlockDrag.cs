@@ -10,6 +10,8 @@ public class BlockDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerD
     private FunctionBlock function;
     private CanvasGroup canvasGroup;
 
+    public bool isOutOfBounds = false;
+
     protected virtual void Awake()
     {
         function = GetComponent<FunctionBlock>();
