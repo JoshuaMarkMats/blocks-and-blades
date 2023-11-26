@@ -59,7 +59,8 @@ public class Controller : MonoBehaviour
     {
         if (isPlaying == 2) //play
         {
-            loop1.infiniteLoop = transform.GetChild(1).GetComponent<Toggle>().isOn;
+            //no infinite loops... for now
+            //loop1.infiniteLoop = transform.GetChild(1).GetComponent<Toggle>().isOn;
             if (loop1.infiniteLoop && loop1.end)
             {
                 StartCoroutine(loop1.Play());
