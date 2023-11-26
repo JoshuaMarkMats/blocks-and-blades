@@ -1,0 +1,1528 @@
+fileFormatVersion: 2
+guid: 74cb5189a992dce4ca455c85b80f038c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8753543135908612891
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_0
+  - first:
+      213: -8750807122565193745
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_1
+  - first:
+      213: -1194999553356024014
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_2
+  - first:
+      213: 3695466751411668941
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_3
+  - first:
+      213: -6708574138153166738
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_4
+  - first:
+      213: -4362820608620496553
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_5
+  - first:
+      213: 2817067267716555892
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_6
+  - first:
+      213: -4768132192026708186
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_7
+  - first:
+      213: -1359534258970237540
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_8
+  - first:
+      213: 4980648381404171216
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_9
+  - first:
+      213: 8066952056317962138
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_10
+  - first:
+      213: -3967969715687007323
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_11
+  - first:
+      213: 487213098556878391
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_12
+  - first:
+      213: 6718735262661752719
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_13
+  - first:
+      213: 7034825772438446905
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_14
+  - first:
+      213: 6580838679038128182
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_15
+  - first:
+      213: -8544351559226490993
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_16
+  - first:
+      213: 8784664947817197419
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_17
+  - first:
+      213: 7676219957943873771
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_18
+  - first:
+      213: 7461597538859445397
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_19
+  - first:
+      213: -4703322150934988275
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_20
+  - first:
+      213: 3914208713047707774
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_21
+  - first:
+      213: -7233660096664094612
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_22
+  - first:
+      213: -6239834032070571948
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_23
+  - first:
+      213: 4347968435954908275
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_24
+  - first:
+      213: -1872542881496693566
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_25
+  - first:
+      213: -7057611015439795257
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_26
+  - first:
+      213: 284996309639486686
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_27
+  - first:
+      213: 3280848748207613657
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_28
+  - first:
+      213: -8790406174826672766
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_29
+  - first:
+      213: 2223747746515293401
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_30
+  - first:
+      213: -6656575222584595545
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_31
+  - first:
+      213: -5484408602905697848
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_32
+  - first:
+      213: 4433588772763757796
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_33
+  - first:
+      213: 1084290020838587252
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_34
+  - first:
+      213: 6711668233923985358
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_35
+  - first:
+      213: 3663118934841753964
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_36
+  - first:
+      213: -2584274980376401516
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_37
+  - first:
+      213: -5281908329555551344
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_38
+  - first:
+      213: -2157040640182913112
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_39
+  - first:
+      213: 8361354269409471596
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_40
+  - first:
+      213: -3026087489819806845
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_41
+  - first:
+      213: -4881744016576071521
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_42
+  - first:
+      213: 5692747947857560318
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_43
+  - first:
+      213: -6072963756735141479
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_44
+  - first:
+      213: 7338914048494642190
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_45
+  - first:
+      213: -5054190385348056178
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_46
+  - first:
+      213: -3470703259663010312
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_47
+  - first:
+      213: -415022679435965732
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_48
+  - first:
+      213: -1830020176668467659
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_49
+  - first:
+      213: -9149915115697783752
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_50
+  - first:
+      213: -7294007928190177710
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_51
+  - first:
+      213: 5069642544487539704
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_52
+  - first:
+      213: -5079419951419155352
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_53
+  - first:
+      213: 5067987093518169678
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_54
+  - first:
+      213: -4760114781418034349
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_55
+  - first:
+      213: -155702894030786801
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_56
+  - first:
+      213: -658494808023614487
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_57
+  - first:
+      213: -4114471640196645016
+    second: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_58
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 961
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e4bb1a65ea258680800000000000000
+      internalID: -8753543135908612891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 897
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fef1b892943ee8680800000000000000
+      internalID: -8750807122565193745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 897
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 237b673dc328a6fe0800000000000000
+      internalID: -1194999553356024014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_3
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 833
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc7c8255e6fe84330800000000000000
+      internalID: 3695466751411668941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_4
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 833
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e68120a6d5b56e2a0800000000000000
+      internalID: -6708574138153166738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_5
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 833
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 759fb6c85c52473c0800000000000000
+      internalID: -4362820608620496553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_6
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 833
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47420a821cb381720800000000000000
+      internalID: 2817067267716555892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_7
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 769
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627b424b80134ddb0800000000000000
+      internalID: -4768132192026708186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_8
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 769
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95ea1a6bc6f12de0800000000000000
+      internalID: -1359534258970237540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_9
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 705
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0db48b47051de1540800000000000000
+      internalID: 4980648381404171216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_10
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 705
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9760f8972293ff60800000000000000
+      internalID: 8066952056317962138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_11
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 705
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5abd7f81190fee8c0800000000000000
+      internalID: -3967969715687007323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 641
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73e66655bbde2c600800000000000000
+      internalID: 487213098556878391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_13
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 641
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8738debf1ebd3d50800000000000000
+      internalID: 6718735262661752719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_14
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 577
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 933e4f694c8b0a160800000000000000
+      internalID: 7034825772438446905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_15
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 577
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630f73c69e5d35b50800000000000000
+      internalID: 6580838679038128182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_16
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 513
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8fff3cd68d5c6980800000000000000
+      internalID: -8544351559226490993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_17
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 513
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6f28751a3669e970800000000000000
+      internalID: 8784664947817197419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_18
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 449
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be03203a169678a60800000000000000
+      internalID: 7676219957943873771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_19
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 385
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59c65a8ad6bec8760800000000000000
+      internalID: 7461597538859445397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_20
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 385
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0a3b494c617abeb0800000000000000
+      internalID: -4703322150934988275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_21
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 386
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7092fd0610125630800000000000000
+      internalID: 3914208713047707774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_22
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 385
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c683b68b770ec9b90800000000000000
+      internalID: -7233660096664094612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_23
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 385
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4584a050208a769a0800000000000000
+      internalID: -6239834032070571948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_24
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 385
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37cf3b78146175c30800000000000000
+      internalID: 4347968435954908275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 95
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c404b1ab246306e0800000000000000
+      internalID: -1872542881496693566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_26
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 320
+        width: 51
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cbb3dd9c245e0e90800000000000000
+      internalID: -7057611015439795257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_27
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 320
+        width: 31
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edcdb5632a284f300800000000000000
+      internalID: 284996309639486686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_28
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 320
+        width: 14
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d623b6cd8ae78d20800000000000000
+      internalID: 3280848748207613657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_29
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 262
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d4e065824320680800000000000000
+      internalID: -8790406174826672766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_30
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 263
+        width: 50
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d49e152bc65cde10800000000000000
+      internalID: 2223747746515293401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_31
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 198
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7abad256a181f93a0800000000000000
+      internalID: -6656575222584595545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_32
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 199
+        width: 52
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c1a5bcee6773e3b0800000000000000
+      internalID: -5484408602905697848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_33
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 198
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ec6eb8af75478d30800000000000000
+      internalID: 4433588772763757796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_34
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 198
+        width: 57
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47bb595770c2c0f00800000000000000
+      internalID: 1084290020838587252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_35
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 134
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecfff45e2b2a42d50800000000000000
+      internalID: 6711668233923985358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_36
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 134
+        width: 43
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c610041634306d230800000000000000
+      internalID: 3663118934841753964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_37
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 135
+        width: 41
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4992cb0f89fc22cd0800000000000000
+      internalID: -2584274980376401516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_38
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 142
+        width: 56
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b1aa8eb54e2b6b0800000000000000
+      internalID: -5281908329555551344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_39
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 135
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a7f0db57f6a012e0800000000000000
+      internalID: -2157040640182913112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_40
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 128
+        width: 53
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ce85d586f790470800000000000000
+      internalID: 8361354269409471596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_41
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 134
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 383790ef57d2106d0800000000000000
+      internalID: -3026087489819806845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_42
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 70
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9838977eaf804cb0800000000000000
+      internalID: -4881744016576071521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_43
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 65
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef242ebd814b00f40800000000000000
+      internalID: 5692747947857560318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_44
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 64
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 999eaf1a3af78bba0800000000000000
+      internalID: -6072963756735141479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_45
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 64
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04a5a1a17f09d560800000000000000
+      internalID: 7338914048494642190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_46
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 69
+        width: 59
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b622e6f98ebd9b0800000000000000
+      internalID: -5054190385348056178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_47
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 67
+        width: 55
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f5fefe16c595dfc0800000000000000
+      internalID: -3470703259663010312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_48
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 70
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cda0d7a621b8d3af0800000000000000
+      internalID: -415022679435965732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_49
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 6
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53ed0ed58567a96e0800000000000000
+      internalID: -1830020176668467659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_50
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 4
+        width: 47
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c3bdb3ea8f40180800000000000000
+      internalID: -9149915115697783752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_51
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 4
+        width: 47
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25e67534f6a76ca90800000000000000
+      internalID: -7294007928190177710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_52
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 4
+        width: 47
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f3236ab80dfa5640800000000000000
+      internalID: 5069642544487539704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_53
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 30
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86c11a257764289b0800000000000000
+      internalID: -5079419951419155352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_54
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 4
+        width: 47
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e463a63096b155640800000000000000
+      internalID: 5067987093518169678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_55
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 30
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bed7393dca0fdb0800000000000000
+      internalID: -4760114781418034349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_56
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 31
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f6bc6fa05d6ddf0800000000000000
+      internalID: -155702894030786801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_57
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 4
+        width: 47
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb3051067e8cd6f0800000000000000
+      internalID: -658494808023614487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_58
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 30
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ff8a7b7d576e6c0800000000000000
+      internalID: -4114471640196645016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
