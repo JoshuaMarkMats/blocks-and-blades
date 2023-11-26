@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class BlockDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerClickHandler, IPointerDownHandler, IBeginDragHandler
+public class BlockDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHandler, IBeginDragHandler, IPointerUpHandler
 {
     Vector3 startPosition;
-    Vector3 diffPosition;
+    //Vector3 diffPosition;
     GameObject canvas_;
 
     private Function_ function;
@@ -30,7 +30,7 @@ public class BlockDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerC
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition - diffPosition;
+        transform.position = Input.mousePosition;// - diffPosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -38,28 +38,24 @@ public class BlockDrag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerC
         canvasGroup.blocksRaycasts=true;
     }
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-
-    }
-
     public void OnPointerDown(PointerEventData eventData)
     {
         startPosition = transform.position;
-        diffPosition = Input.mousePosition - startPosition;
+        //diffPosition = Input.mousePosition - startPosition;
         EventSystem.current.SetSelectedGameObject(gameObject);
+        DragDropManager.Instance.lastSelected = transform;
         EventSystem.current.currentSelectedGameObject.transform.SetParent(canvas_.transform);
         Debug.Log("start drag " + gameObject.name);
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     void Start()
     {
         canvas_ = GameObject.Find("Canvas");
-    }
-
-    void Update()
-    {
-    
     }
 
 }
