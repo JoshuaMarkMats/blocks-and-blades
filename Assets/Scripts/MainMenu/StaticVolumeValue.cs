@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class StaticVolumeValue
 {
-   public static float volume;
+   public static float volume = 1f;
 }

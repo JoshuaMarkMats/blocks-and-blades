@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour, IDamageable
 {
@@ -9,6 +10,8 @@ public class PlayerController : MonoBehaviour, IDamageable
     private const string LOOKX_VALUE = "lookX";
     private const string FORCE_IDLE_TRIGGER = "forceIdle";
     private const string DEATH_TRIGGER = "death";
+
+    public GameObject Object;
 
     /* Base Stats */
     [SerializeField]
@@ -19,11 +22,11 @@ public class PlayerController : MonoBehaviour, IDamageable
     [SerializeField]
     private float baseSpeed = 0.1f;
     [SerializeField]
-    private float invincibleBlinkInterval = 0.1f;  
+    private float invincibleBlinkInterval = 0.1f;
 
     /* Invincibility */
     [Space(0)]
-    public float timeInvincible = 0.3f;   
+    public float timeInvincible = 0.3f;
 
     [SerializeField]
     private float staggerDuration = 1f;
@@ -47,7 +50,7 @@ public class PlayerController : MonoBehaviour, IDamageable
     float invincibleTimer;
 
     public bool IsAlive { get { return isAlive; } }
-    public float LookDirection { get { return lookDirection; }  }
+    public float LookDirection { get { return lookDirection; } }
     public bool IsStaggered { get { return isStaggered; } }
 
     public bool IsMovementPaused
@@ -58,10 +61,10 @@ public class PlayerController : MonoBehaviour, IDamageable
             if (value == false && isStaggered)
                 return; //don't remove movement pause if staggered
 
-            isMovementPaused = value;        
+            isMovementPaused = value;
             if (value == true) //safely set isMoving
                 animator.SetBool(IS_MOVING_BOOL, false);
-            
+
         }
     }
 
@@ -69,10 +72,12 @@ public class PlayerController : MonoBehaviour, IDamageable
     {
         get { return playerAttack.CurrentAttackType; }
     }
-    
+
 
     void Start()
     {
+        GameManager.Instance.game_overEvent.AddListener(GameOver);
+
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
@@ -80,10 +85,11 @@ public class PlayerController : MonoBehaviour, IDamageable
         playerRenderer = GetComponent<SpriteRenderer>();
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
     }
 
     void Update()
-    {            
+    {
         //invincibility effect
         if (isInvincible)
         {
@@ -96,8 +102,8 @@ public class PlayerController : MonoBehaviour, IDamageable
                     StopCoroutine(invincibleBlinkCoroutine);
                     playerRenderer.enabled = true;
                 }
-                    
-            }               
+
+            }
         }
 
         //don't do the sprite stuff if player is dead or paused
@@ -186,7 +192,7 @@ public class PlayerController : MonoBehaviour, IDamageable
         isMovementPaused = true;
         animator.SetTrigger(FORCE_IDLE_TRIGGER);
         yield return new WaitForSeconds(duration);
-        staggerEffect.SetActive(false);        
+        staggerEffect.SetActive(false);
         isMovementPaused = false;
         isStaggered = false;
     }
@@ -200,7 +206,7 @@ public class PlayerController : MonoBehaviour, IDamageable
         {
             playerRenderer.enabled = !playerRenderer.enabled;
             yield return intervalTime;
-        }      
+        }
     }
 
     private void PlayerDeath()
@@ -217,7 +223,21 @@ public class PlayerController : MonoBehaviour, IDamageable
         playerRenderer.enabled = true;
 
         animator.SetTrigger(DEATH_TRIGGER);
-        
+
+        //starts gamover_Event
+        StartCoroutine(LoseScreenWait());
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("LoseScene");
+        Debug.Log("Game Over!");
+    }
+
+    IEnumerator LoseScreenWait()
+    {
+        yield return new WaitForSeconds(1.5f);
+        GameManager.Instance.game_overEvent.Invoke();
     }
 
 }

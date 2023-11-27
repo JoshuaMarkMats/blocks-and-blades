@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     // Singleton instance of the game manager
     public static GameManager Instance { get; private set; }
 
+    public UnityEvent game_overEvent = new();
+
     public enum AttackType
     {
         LIGHT_ATTACK,
@@ -34,4 +36,6 @@ public class GameManager : MonoBehaviour
     {
 
     }
+
+   
 }
