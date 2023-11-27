@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour, IDamageable
 {   
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour, IDamageable
     private SpriteRenderer playerRenderer;
     private Animator animator;
     private float lookDirection = 1;
+    private Vector2 moveDirection = Vector2.zero;
 
     /* Base Stats */
     [SerializeField]
@@ -80,16 +82,13 @@ public class PlayerController : MonoBehaviour, IDamageable
         if (!isAlive || movementPaused)
             return;
 
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
-
         //sprite direction
-        if (!Mathf.Approximately(horizontal, 0.0f))
-            lookDirection = horizontal;
+        if (!Mathf.Approximately(moveDirection.x, 0.0f))
+            lookDirection = moveDirection.x;
         animator.SetFloat("lookX", lookDirection);
 
         //sprite idle or moving
-        if (!Mathf.Approximately(horizontal, 0.0f) || !Mathf.Approximately(vertical, 0.0f))
+        if (!Mathf.Approximately(moveDirection.x, 0.0f) || !Mathf.Approximately(moveDirection.y, 0.0f))
             animator.SetBool("isMoving", true);
         else
             animator.SetBool("isMoving", false);
@@ -103,11 +102,16 @@ public class PlayerController : MonoBehaviour, IDamageable
 
         Vector2 position = transform.position;
 
-        position.y += baseSpeed * vertical;
-        position.x += baseSpeed * horizontal;
+        //position.y += baseSpeed * vertical;
+        //position.x += baseSpeed * horizontal;
 
-        rigidbody2d.MovePosition(position);
+        rigidbody2d.MovePosition(position + baseSpeed * moveDirection);
 
+    }
+
+    private void OnMove(InputValue inputValue)
+    {
+        moveDirection = inputValue.Get<Vector2>();
     }
 
     public void MakeInvincible(float duration)

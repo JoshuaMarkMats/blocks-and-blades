@@ -2624,9 +2624,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5b40caaa7f8e74aa298112ef6d1cea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healAmount: 1
-  healTick: 0.1
-  duration: 3
 --- !u!1001 &945668121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49151,6 +49148,7 @@ GameObject:
   - component: {fileID: 8951896711038892799}
   - component: {fileID: 3101792178651012283}
   - component: {fileID: 7588638110319192658}
+  - component: {fileID: 8951896711038892800}
   m_Layer: 6
   m_Name: Aira
   m_TagString: Untagged
@@ -49306,6 +49304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 0.25
   damage: 3
+  attackCenterOffset: {x: 0, y: 0}
   attackAreaRange: 0.5
   attackAreaRadius: 0.7
   attackAreaMask:
@@ -49357,6 +49356,36 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.75400496, y: 0.44826126}
   m_EdgeRadius: 0
+--- !u!114 &8951896711038892800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135145377716678891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: caa85f869ba11c44c8d8e3e7caa5e6c8, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

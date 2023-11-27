@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -52,7 +53,7 @@ public class PlayerAttack : MonoBehaviour
                 isAttacking = true;
                 playerController.MovementPaused = true;
                 //Attack();
-                animator.SetTrigger("attack");
+                animator.SetTrigger("lightAttack");
                 attackTimer = 0;
             }
         }
