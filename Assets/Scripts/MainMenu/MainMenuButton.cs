@@ -5,15 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public AudioSource audioSource;
-
     public GameObject setting;
     bool isOn = false;
-
-    private void Awake()
-    {
-        audioSource.Play();
-    }
 
     public void play()
     {
