@@ -14,7 +14,7 @@ public class EnemyBase : MonoBehaviour, IDamageable
     [SerializeField]
     private int maxHealth = 10;
     [SerializeField]
-    private int currentHealth;
+    protected int currentHealth;
     [SerializeField]
     private HealthBar healthBar;
 

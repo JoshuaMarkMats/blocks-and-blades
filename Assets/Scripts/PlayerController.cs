@@ -231,7 +231,6 @@ public class PlayerController : MonoBehaviour, IDamageable
     public void GameOver()
     {
         SceneManager.LoadScene("LoseScene");
-        Debug.Log("Game Over!");
     }
 
     IEnumerator LoseScreenWait()

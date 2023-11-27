@@ -44588,6 +44588,9 @@ MonoBehaviour:
   game_overEvent:
     m_PersistentCalls:
       m_Calls: []
+  game_winEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &2089060115
 Transform:
   m_ObjectHideFlags: 0
@@ -44787,6 +44790,7 @@ MonoBehaviour:
   staggerDuration: 2
   staggerEffect: {fileID: 486949545}
   target: {fileID: 2780945571577397384}
+  GameObject: {fileID: 2089060113}
 --- !u!222 &2162060033619185468
 CanvasRenderer:
   m_ObjectHideFlags: 0

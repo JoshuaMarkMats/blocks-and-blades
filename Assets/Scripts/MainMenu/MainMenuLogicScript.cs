@@ -13,11 +13,6 @@ public class NewBehaviourScript : MonoBehaviour
 
     public Slider Slider;
 
-    private void Awake()
-    {
-        StaticVolumeValue.volume = Slider.value;
-    }
-
     public void play()
     {
         SceneManager.LoadScene(1);
