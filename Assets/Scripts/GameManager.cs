@@ -8,10 +8,13 @@ public class GameManager : MonoBehaviour
     // Singleton instance of the game manager
     public static GameManager Instance { get; private set; }
 
-    public UnityEvent fpsThirty;
-    public UnityEvent fpsFortyFive;
-    public UnityEvent fpsSixty;
-    public UnityEvent fpsOneHundredTwenty;
+    public enum AttackType
+    {
+        LIGHT_ATTACK,
+        HEAVY_ATTACK,
+        PARRY,
+        NONE
+    }
 
     private void Awake()
     {
@@ -29,41 +32,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = 120;
-        fpsThirty.AddListener(setFpsThirty);
-        fpsFortyFive.AddListener(setFpsFortyFive);
-        fpsSixty.AddListener(setFpsSixty);
-        fpsOneHundredTwenty.AddListener(setFpsOneHundredTwenty);
-    }
 
-    private void Update()
-    {
-        //Debug.Log(gameState);
-    }
-
-    public void InvokeDeath()
-    {
-        //death.Invoke();
-    }
-
-    public void setFpsThirty()
-    { 
-        Application.targetFrameRate = 30;
-    }
-
-    public void setFpsFortyFive()
-    {
-        Application.targetFrameRate = 45;
-    }
-
-    public void setFpsSixty()
-    {
-        Application.targetFrameRate = 60;
-    }
-
-    public void setFpsOneHundredTwenty()
-    {
-        Application.targetFrameRate = 120;
     }
 }

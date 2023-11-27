@@ -6,8 +6,6 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour, IDamageable
 {   
     Rigidbody2D rigidbody2d;
-    float horizontal;
-    float vertical;
 
     private Coroutine invincibleBlinkCoroutine;
     private SpriteRenderer playerRenderer;

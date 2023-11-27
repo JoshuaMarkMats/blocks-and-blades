@@ -17,7 +17,7 @@ public class EnemyBase : MonoBehaviour, IDamageable
     protected float baseSpeed = 0.1f;
     [SerializeField]
     private bool isStationary = false; //enemy incapable of movement
-    private bool isMovementPaused = false; //enemy movement paused (saves lookX)
+    private bool movementPaused = false; //enemy movement paused (saves lookX)
     protected Vector2 moveDirection = Vector2.zero; //direction of movement, also used for determining sprite direction for overrides
 
     /* Enemy Hit */
@@ -29,14 +29,27 @@ public class EnemyBase : MonoBehaviour, IDamageable
     private float flashDuration = 0.1f;
     private Coroutine flashCoroutine;
 
+    private bool isAlive = true;
+
     private Animator animator;
     private float lookDirection = 1;
     protected Rigidbody2D rigidbody2d;
     private SpriteRenderer spriteRenderer;
 
+    public bool IsAlive { get { return isAlive; } }
     public float LookDirection { get { return lookDirection; } }
     public bool IsStationary { get { return isStationary; } set { isStationary = value; } }
-    public bool IsMovementPaused { get { return isMovementPaused; } set { isMovementPaused = value; } }
+    public bool MovementPaused
+    {
+        get { return movementPaused; }
+        set
+        {
+            movementPaused = value;
+            //safely set isMoving
+            if (value == true)
+                animator.SetBool("isMoving", false);
+        }
+    }
 
     protected virtual void Start()
     {
@@ -67,7 +80,7 @@ public class EnemyBase : MonoBehaviour, IDamageable
     private void LateUpdate()
     {
         //if paused, don't do direction changes
-        if (isMovementPaused)
+        if (movementPaused)
             return;
 
         //sprite direction
@@ -78,10 +91,10 @@ public class EnemyBase : MonoBehaviour, IDamageable
 
     private void FixedUpdate()
     {
-        if (isStationary || isMovementPaused)
-            return;
+        if (!isStationary && !movementPaused)
+            Move();
 
-        Move();
+
     }
 
     protected virtual void Move()
