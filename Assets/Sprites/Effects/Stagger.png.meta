@@ -1,7 +1,16 @@
 fileFormatVersion: 2
-guid: be8cb844865c2504ea98378f5f3138d4
+guid: 1e1e70fa77c8b134bab5eab817a16da3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6220497478337741233
+    second: Stagger_0
+  - first:
+      213: -1906984851032814029
+    second: Stagger_1
+  - first:
+      213: -1799617059957895437
+    second: Stagger_2
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -48,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,12 +81,11 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -90,105 +98,70 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fps_0
+      name: Stagger_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7cb429e5d2590c848a9cb134dfd48144
-      internalID: 975693923
+      spriteID: 1b1c88abf75a35650800000000000000
+      internalID: 6220497478337741233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fps_1
+      name: Stagger_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3a990964316efea4580aa34763f26061
-      internalID: 574178555
+      spriteID: 33e4322b1670985e0800000000000000
+      internalID: -1906984851032814029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fps_2
+      name: Stagger_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 128
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 311be30bcff4e454fa628a335699c631
-      internalID: 862879429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fps_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8fa8fed60b9680442917d375183790cb
-      internalID: 2003593555
+      spriteID: 3fe0a7991d97607e0800000000000000
+      internalID: -1799617059957895437
       vertices: []
       indices: 
       edges: []
@@ -196,7 +169,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 8568d848ee84bba46b7918ee959b0c48
     internalID: 0
     vertices: []
     indices: 
@@ -204,10 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      fps_0: 975693923
-      fps_1: 574178555
-      fps_2: 862879429
-      fps_3: 2003593555
+      Stagger_0: 6220497478337741233
+      Stagger_1: -1906984851032814029
+      Stagger_2: -1799617059957895437
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

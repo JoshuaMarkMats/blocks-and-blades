@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerAttack : MonoBehaviour
+public class PlayerAttack : MonoBehaviour, IRPSAttacker
 {
-    private PlayerController playerController;
-    private Animator animator;
-
     /* Attack Stats */
     [SerializeField]
     private float attackCooldown = 0.5f;
@@ -18,6 +15,8 @@ public class PlayerAttack : MonoBehaviour
     private int heavyAttackDamage = 10;
     [SerializeField]
     private int parryDamage = 3;
+    [SerializeField]
+    private float rpsWinDamageModifier = 2f;
 
     [SerializeField]
     private Vector2 attackCenterOffset; //center to base attacks on
@@ -28,12 +27,14 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField]
     private LayerMask attackAreaMask;
 
-    private Collider2D[] targets;
+    private PlayerController playerController;
+    private Animator animator;
     private Vector2 attackDirection; //whether to swing left or right
-    private GameManager.AttackType currentAttackType = GameManager.AttackType.NONE;
     private int damage = 0; //damage to be dealt, modified by attack type
-    
     private bool isAttacking = false;
+
+    private Collider2D[] targets;   
+    private GameManager.AttackType currentAttackType = GameManager.AttackType.NONE;
 
     public GameManager.AttackType CurrentAttackType { get { return currentAttackType; } }
 
@@ -74,13 +75,13 @@ public class PlayerAttack : MonoBehaviour
 
     private void AttackCheck(GameManager.AttackType attackType)
     {
-        if (!playerController.IsAlive)
+        if (!playerController.IsAlive || playerController.IsStaggered)
             return;
         if (attackTimer < attackCooldown || isAttacking)
             return;
 
         isAttacking = true;
-        playerController.MovementPaused = true;
+        playerController.IsMovementPaused = true;
         currentAttackType = attackType;
         switch (attackType)
         {
@@ -108,18 +109,62 @@ public class PlayerAttack : MonoBehaviour
 
         foreach (Collider2D target in targets)
         {
-            if (target.TryGetComponent<IDamageable>(out var damageable))
+            //if not damageable, skip
+            if (!target.TryGetComponent<IDamageable>(out var damageable))
+                continue; 
+
+            //if not RPS attacker, only deal damage
+            if (!target.TryGetComponent<IRPSAttacker>(out var rpsAttacker))
             {
-                damageable.ChangeHealth(-damage);
+                damageable.ChangeHealth((int)(-damage * (damageable.IsStaggered ? 1 : rpsWinDamageModifier))); //add multiplier if enemy is staggered
+                continue;
             }
+
+            if (currentAttackType == GameManager.AttackType.LIGHT_ATTACK)
+            {
+                if (rpsAttacker.CurrentAttackType == GameManager.AttackType.HEAVY_ATTACK)
+                {
+                    damageable.Stagger();
+                    damageable.ChangeHealth((int)(-damage * rpsWinDamageModifier));
+                }
+                else if (rpsAttacker.CurrentAttackType == GameManager.AttackType.PARRY)
+                    playerController.Stagger();
+                else
+                    damageable.ChangeHealth((int)(-damage * (damageable.IsStaggered ? 1 : rpsWinDamageModifier))); 
+            }
+
+            if (currentAttackType == GameManager.AttackType.HEAVY_ATTACK)
+            {
+                if (rpsAttacker.CurrentAttackType == GameManager.AttackType.PARRY)
+                {
+                    damageable.Stagger();
+                    damageable.ChangeHealth((int)(-damage * rpsWinDamageModifier));
+                }
+                else if (rpsAttacker.CurrentAttackType == GameManager.AttackType.LIGHT_ATTACK)
+                    continue;
+                else
+                    damageable.ChangeHealth((int)(-damage * (damageable.IsStaggered ? 1 : rpsWinDamageModifier)));
+            }
+
+            if (currentAttackType == GameManager.AttackType.PARRY)
+            {
+                if (rpsAttacker.CurrentAttackType == GameManager.AttackType.LIGHT_ATTACK)
+                {
+                    damageable.ChangeHealth((int)(-damage * rpsWinDamageModifier));
+                }
+                else if (rpsAttacker.CurrentAttackType == GameManager.AttackType.HEAVY_ATTACK)
+                    continue;
+                else
+                    damageable.ChangeHealth((int)(-damage * (damageable.IsStaggered ? 1 : rpsWinDamageModifier)));
+            }
+
         }
     }
 
-    private void FinishAttack()
+    public void EndAttack()
     {
-        Debug.Log("finishattack called");
         isAttacking = false;
         currentAttackType = GameManager.AttackType.NONE;
-        playerController.MovementPaused = false;
+        playerController.IsMovementPaused = false;
     }
 }

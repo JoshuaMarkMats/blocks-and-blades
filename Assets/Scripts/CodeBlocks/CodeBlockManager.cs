@@ -9,6 +9,7 @@ using UnityEngine.Events;
 
 public class CodeBlockManager : MonoBehaviour
 {
+    //custom event to get error type as parameter
     [Serializable]
     public class CodeBlockErrorEvent : UnityEvent<CodeBlockErrorType> { };
 

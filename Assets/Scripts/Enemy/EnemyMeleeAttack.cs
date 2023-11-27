@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mail;
 using UnityEngine;
+using static GameManager;
 
-public class EnemyMeleeAttack : MonoBehaviour
+public class EnemyMeleeAttack : MonoBehaviour, IRPSAttacker
 {
     /* Attack */
     [SerializeField]
@@ -12,6 +13,8 @@ public class EnemyMeleeAttack : MonoBehaviour
     private int heavyAttackDamage = 10;
     [SerializeField]
     private int parryDamage = 3;
+    [SerializeField]
+    private float rpsWinDamageModifier = 1.5f;
     [SerializeField]
     private float detectionRange = 2f;
     [SerializeField]
@@ -23,7 +26,7 @@ public class EnemyMeleeAttack : MonoBehaviour
     [SerializeField]
     private LayerMask attackAreaMask; //what can be attacked
 
-    public GameManager.AttackType currentAttackType = GameManager.AttackType.NONE;
+    public AttackType currentAttackType = AttackType.NONE;
     private Vector2 attackDirection;
     private int damage = 10;
     private bool isAttacking = false;
@@ -36,17 +39,20 @@ public class EnemyMeleeAttack : MonoBehaviour
     private const string HEAVY_ATTACK_TRIGGER = "heavyAttack";
     private const string PARRY_TRIGGER = "parry";
 
+    public AttackType CurrentAttackType { get { return currentAttackType; } }
+
     void Start()
     {
-        enemyController= GetComponent<ChasingEnemy>();
+        enemyController= GetComponent<EnemyBase>();
         animator = GetComponent<Animator>();
     }
-
     void Update()
     {
-        //if player in range and not currently attacking, randomly choose an attack
-        if (!isAttacking && Physics2D.OverlapCircle((Vector2)transform.position + attackCenterOffset, detectionRange, attackAreaMask) != null)
-            AttackCheck((GameManager.AttackType)Random.Range(0, 3));
+
+        //Debug.Log($"enemy checking attack, attacking: {isAttacking}, attack type: {currentAttackType}");
+        //if player in range and not currently attacking and not staggered, randomly choose an attack
+        if (!isAttacking && !enemyController.IsStaggered && Physics2D.OverlapCircle((Vector2)transform.position + attackCenterOffset, detectionRange, attackAreaMask) != null)
+            AttackCheck((AttackType)Random.Range(0, 3));
     }
 
     private void OnDrawGizmosSelected()
@@ -60,25 +66,25 @@ public class EnemyMeleeAttack : MonoBehaviour
         Gizmos.DrawWireSphere((Vector2)transform.position + attackCenterOffset, detectionRange);
     }
 
-    private void AttackCheck(GameManager.AttackType attackType)
+    private void AttackCheck(AttackType attackType)
     {
         if (!enemyController.IsAlive)
             return;
 
         isAttacking = true;
-        enemyController.MovementPaused = true;
+        enemyController.IsMovementPaused = true;
         currentAttackType = attackType;
         switch (attackType)
         {
-            case GameManager.AttackType.LIGHT_ATTACK:
+            case AttackType.LIGHT_ATTACK:
                 animator.SetTrigger(LIGHT_ATTACK_TRIGGER);
                 damage = lightAttackDamage;
                 break;
-            case GameManager.AttackType.HEAVY_ATTACK:
+            case AttackType.HEAVY_ATTACK:
                 animator.SetTrigger(HEAVY_ATTACK_TRIGGER);
                 damage = heavyAttackDamage;
                 break;
-            case GameManager.AttackType.PARRY:
+            case AttackType.PARRY:
                 animator.SetTrigger(PARRY_TRIGGER);
                 damage = parryDamage;
                 break;
@@ -94,18 +100,62 @@ public class EnemyMeleeAttack : MonoBehaviour
 
         foreach (Collider2D target in targets)
         {
-            if (target.TryGetComponent<IDamageable>(out var damageable))
+            //if not damageable, skip
+            if (!target.TryGetComponent<IDamageable>(out var damageable))
+                continue;
+
+            //if not RPS attacker, only deal damage
+            if (!target.TryGetComponent<IRPSAttacker>(out var rpsAttacker))
             {
-                damageable.ChangeHealth(-damage);
+                damageable.ChangeHealth((int)(-damage * (damageable.IsStaggered ? 1 : rpsWinDamageModifier))); //add multiplier if enemy is staggered
+                continue;
+            }
+
+
+            if (currentAttackType == AttackType.LIGHT_ATTACK)
+            {
+                if (rpsAttacker.CurrentAttackType == AttackType.HEAVY_ATTACK)
+                {
+                    damageable.Stagger();
+                    damageable.ChangeHealth((int)(-damage * rpsWinDamageModifier));
+                }
+                else if (rpsAttacker.CurrentAttackType == AttackType.PARRY)
+                    enemyController.Stagger();
+                else
+                    damageable.ChangeHealth((int)(-damage * (damageable.IsStaggered ? 1 : rpsWinDamageModifier)));
+            }
+
+            if (currentAttackType == AttackType.HEAVY_ATTACK)
+            {
+                if (rpsAttacker.CurrentAttackType == AttackType.PARRY)
+                {
+                    damageable.Stagger();
+                    damageable.ChangeHealth((int)(-damage * rpsWinDamageModifier));
+                }
+                else if (rpsAttacker.CurrentAttackType == AttackType.LIGHT_ATTACK)
+                    continue;
+                else
+                    damageable.ChangeHealth((int)(-damage * (damageable.IsStaggered ? 1 : rpsWinDamageModifier)));
+            }
+
+            if (currentAttackType == AttackType.PARRY)
+            {
+                if (rpsAttacker.CurrentAttackType == AttackType.LIGHT_ATTACK)
+                {
+                    damageable.ChangeHealth((int)(-damage * rpsWinDamageModifier));
+                }
+                else if (rpsAttacker.CurrentAttackType == AttackType.HEAVY_ATTACK)
+                    continue;
+                else
+                    damageable.ChangeHealth((int)(-damage * (damageable.IsStaggered ? 1 : rpsWinDamageModifier)));
             }
         }
     }
 
-    private void FinishAttack()
+    public void EndAttack()
     {
-        Debug.Log("finishattack called");
         isAttacking = false;
-        currentAttackType = GameManager.AttackType.NONE;
-        enemyController.MovementPaused = false;
+        currentAttackType = AttackType.NONE;
+        enemyController.IsMovementPaused = false;
     }
 }
