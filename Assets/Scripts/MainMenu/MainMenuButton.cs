@@ -10,7 +10,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     public void play()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1); 
     }
     
     public void settings()
