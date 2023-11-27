@@ -18,42 +18,97 @@ using UnityEngine.UI;
 // on the main loop of the object
 
 public class Controller : MonoBehaviour
-{
+{   
+    [SerializeField]
+    private NotificationBox errorBox;
+    [SerializeField]
+    private NotificationBox successBox;
+
+    [SerializeField]
+    private int tests = 3;
+    [SerializeField] 
+    private int testLowerBound = -10;
+    [SerializeField]
+    private int testUpperBound = 10;
+    [SerializeField]
+    private Solution solution;
+
+    public TerminalAccess terminalAccess;
     public delegate void FuntionsList();
     public TextMeshProUGUI inputDisplay, outputDisplay;
     List<FunctionBlock> sequence; //list of functions (type Functions_). The code sequence is read from here
     private int isPlaying;
-
     public FunctionBlock headBlock;
 
     MainFunction loop1;
+    [SerializeField]
+    private int correctTests;
+    private int completedTests = 0;
+    private int testValue;
 
-    private void Awake()
+    void Start()
     {
-        //function = GetComponent<Function_>();
+        CodeBlockManager.Instance.codeBlockErrorEvent.AddListener(OpenErrorBox);
+        solution = GetComponent<Solution>();
+        isPlaying = 0;
+        sequence = new List<FunctionBlock>();
     }
 
     public void Paly()
     {
+        successBox.gameObject.SetActive(false);
+        errorBox.gameObject.SetActive(false);
+        correctTests = 0;
+        completedTests = 0;
         sequence.Clear();
         sequence = TranslateCodeFromBlocks(headBlock, sequence);
-        
-        loop1 = new MainFunction(inputDisplay, outputDisplay, sequence, 5);
-        StartCoroutine(loop1.Play());
+
+        RunNewFunction();           
 
         isPlaying = 2; 
     }
 
-    public void Stop()
+    private void RunNewFunction()
+    {
+        testValue = Random.Range(testLowerBound, testUpperBound);
+        loop1 = new MainFunction(inputDisplay, outputDisplay, sequence, testValue);
+        StartCoroutine(loop1.Play());        
+    }
+
+    private void Update()
+    {     
+
+        if (completedTests < tests && isPlaying == 2 && loop1.end)
+        {
+            completedTests++;
+
+            if (outputDisplay.text == solution.Solve(testValue))
+                correctTests++;
+
+            if (correctTests == tests)
+            {
+                terminalAccess.puzzleSolved.Invoke();
+                successBox.gameObject.SetActive(true);
+                successBox.Text = "Access Granted!";
+                isPlaying = 1;
+                return;
+            }
+
+            if (completedTests == tests)
+                isPlaying = 1;
+            else
+                RunNewFunction();
+                
+            
+        }
+    }
+
+    /*public void Stop()
     {
         isPlaying = 1; 
     }
 
-    void Start()
-    {
-        isPlaying = 0; 
-        sequence = new List<FunctionBlock>();
-    }
+    
     
     void Update()
     {
@@ -70,8 +125,8 @@ public class Controller : MonoBehaviour
         {
             StopCoroutine(loop1.Play());
         }
-    }
-    
+    }*/
+
     //recursive parser function
     private List<FunctionBlock> TranslateCodeFromBlocks(FunctionBlock block, List<FunctionBlock> sequence_)
     {
@@ -94,16 +149,20 @@ public class Controller : MonoBehaviour
                 }
             }
         }*/
-        //Debug.Log("adding item");
         sequence_.Add(block);
-        //Debug.Log($"new sequence length is {sequence_.Count}");
         if (block.nextBlock != null)
             return TranslateCodeFromBlocks(block.nextBlock, sequence_);
         
         
         return sequence_;
     }
-    
+
+    public void OpenErrorBox(string message)
+    {
+        errorBox.gameObject.SetActive(true);
+        errorBox.Text = message;
+    }
+
 }
 
 public class MainFunction
@@ -112,7 +171,7 @@ public class MainFunction
     List<FunctionBlock> sequence_;
     public bool infiniteLoop;
     public bool end;
-    public int inputValue = 10;
+    public int inputValue;
     private float waitTime;
     public Dictionary<string, object> variables = new();
 

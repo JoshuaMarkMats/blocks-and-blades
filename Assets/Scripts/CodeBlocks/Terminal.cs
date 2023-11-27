@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class HurtEffect : AutoDestroyPoolableObject
+public class Terminal : MonoBehaviour
 {
-    //bruh
+    
 }

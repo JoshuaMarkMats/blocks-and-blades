@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: e65ee7770020b454baa8990204297da1
+guid: 2203ad7118d0ded4f88498103736f60d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5112348122291723090
-    second: 11_26 - Button + Barrier + Module_0
-  - first:
-      213: -8985824008069401202
-    second: 11_26 - Button + Barrier + Module_1
-  - first:
-      213: 8471541946207267827
-    second: 11_26 - Button + Barrier + Module_2
-  - first:
-      213: 6269997636475736619
-    second: 11_26 - Button + Barrier + Module_3
+      213: -6445830327266304636
+    second: Approved_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -107,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 11_26 - Button + Barrier + Module_0
+      name: Approved_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 25
-        width: 24
-        height: 13
+        x: 29
+        y: 28
+        width: 118
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,71 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea4aaaa187a4d09b0800000000000000
-      internalID: -5112348122291723090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 11_26 - Button + Barrier + Module_1
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 25
-        width: 24
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e85b8d07ca0fb4380800000000000000
-      internalID: -8985824008069401202
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 11_26 - Button + Barrier + Module_2
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 0
-        width: 194
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3fb61831486f09570800000000000000
-      internalID: 8471541946207267827
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 11_26 - Button + Barrier + Module_3
-      rect:
-        serializedVersion: 2
-        x: 335
-        y: 14
-        width: 34
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b22dca861a1830750800000000000000
-      internalID: 6269997636475736619
+      spriteID: 48d1ad4087fcb86a0800000000000000
+      internalID: -6445830327266304636
       vertices: []
       indices: 
       edges: []
@@ -200,11 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      11_26 - Button + Barrier + Module_0: -5112348122291723090
-      11_26 - Button + Barrier + Module_1: -8985824008069401202
-      11_26 - Button + Barrier + Module_2: 8471541946207267827
-      11_26 - Button + Barrier + Module_3: 6269997636475736619
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
