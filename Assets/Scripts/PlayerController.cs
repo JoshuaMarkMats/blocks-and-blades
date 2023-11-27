@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour, IDamageable
     [SerializeField]
     private float invincibleBlinkInterval = 0.1f;
     private bool isAlive = true;
+    private bool movementPaused = false;
 
     /* Invincibility */
     [Space(0)]
@@ -34,6 +35,18 @@ public class PlayerController : MonoBehaviour, IDamageable
     public int Health { get { return currentHealth; } }
     public bool IsAlive { get { return isAlive; } }
     public float LookDirection { get { return lookDirection; }  }
+
+    public bool MovementPaused
+    {
+        get { return movementPaused; }
+        set
+        {
+            movementPaused = value;
+            //safely set isMoving
+            if (value == true)
+                animator.SetBool("isMoving", false);
+        }
+    }
 
     void Start()
     {
@@ -46,24 +59,7 @@ public class PlayerController : MonoBehaviour, IDamageable
     }
 
     void Update()
-    {
-        if (isAlive)
-        {
-            horizontal = Input.GetAxisRaw("Horizontal");
-            vertical = Input.GetAxisRaw("Vertical");
-
-            //sprite direction
-            if (!Mathf.Approximately(horizontal, 0.0f))
-                lookDirection = horizontal;
-            animator.SetFloat("lookX", lookDirection);
-
-            //sprite idle or moving
-            if (!Mathf.Approximately(horizontal, 0.0f) || !Mathf.Approximately(vertical, 0.0f))
-                animator.SetBool("isMoving", true);
-            else
-                animator.SetBool("isMoving", false);
-        }       
-
+    {            
         //invincibility effect
         if (isInvincible)
         {
@@ -79,20 +75,39 @@ public class PlayerController : MonoBehaviour, IDamageable
                     
             }               
         }
+
+        //don't do the sprite stuff if player is dead or paused
+        if (!isAlive || movementPaused)
+            return;
+
+        horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
+
+        //sprite direction
+        if (!Mathf.Approximately(horizontal, 0.0f))
+            lookDirection = horizontal;
+        animator.SetFloat("lookX", lookDirection);
+
+        //sprite idle or moving
+        if (!Mathf.Approximately(horizontal, 0.0f) || !Mathf.Approximately(vertical, 0.0f))
+            animator.SetBool("isMoving", true);
+        else
+            animator.SetBool("isMoving", false);
     }
 
     void FixedUpdate()
     {
-        if (isAlive)
-        {
-            Vector2 position = transform.position;
+        //don't move if dead or paused
+        if (!isAlive || movementPaused)
+            return;
 
-            position.y += baseSpeed * vertical;
-            position.x += baseSpeed * horizontal;
+        Vector2 position = transform.position;
 
-            rigidbody2d.MovePosition(position);
-        }
-        
+        position.y += baseSpeed * vertical;
+        position.x += baseSpeed * horizontal;
+
+        rigidbody2d.MovePosition(position);
+
     }
 
     public void MakeInvincible(float duration)

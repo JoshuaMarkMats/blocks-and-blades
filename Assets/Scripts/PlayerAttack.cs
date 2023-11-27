@@ -14,13 +14,25 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField]
     private int damage = 3;
     [SerializeField]
+    private Vector2 attackCenterOffset; //center to base attacks on
+    [SerializeField]
     private float attackAreaRange = 1.5f; //how far out to create the attack area
     [SerializeField]
     private float attackAreaRadius = 2f; //radius of attack area
     private Collider2D[] targets;
-    private Vector2 attackAreaOffset;
+    private Vector2 attackAreaOffset; //whether to swing left or right
     [SerializeField]
     private LayerMask attackAreaMask;
+
+    private bool isAttacking = false;
+
+    private void OnDrawGizmosSelected()
+    {
+        //attack areas
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere((Vector2)transform.position + attackCenterOffset + Vector2.left * attackAreaRange, attackAreaRadius);
+        Gizmos.DrawWireSphere((Vector2)transform.position + attackCenterOffset + Vector2.right * attackAreaRange, attackAreaRadius);
+    }
 
     private void Start()
     {
@@ -35,9 +47,11 @@ public class PlayerAttack : MonoBehaviour
 
         if (playerController.IsAlive)
         {
-            if (Input.GetButtonDown("Fire1") && attackTimer >= attackCooldown)
+            if (Input.GetButtonDown("Fire1") && attackTimer >= attackCooldown && !isAttacking)
             {
-                Attack();
+                isAttacking = true;
+                playerController.MovementPaused = true;
+                //Attack();
                 animator.SetTrigger("attack");
                 attackTimer = 0;
             }
@@ -49,7 +63,7 @@ public class PlayerAttack : MonoBehaviour
     {
         attackAreaOffset = (playerController.LookDirection < 0) ? Vector2.left : Vector2.right;
 
-        targets = Physics2D.OverlapCircleAll((Vector2)transform.position + 0.5f * Vector2.up + attackAreaOffset * attackAreaRange, attackAreaRadius, attackAreaMask);
+        targets = Physics2D.OverlapCircleAll((Vector2)transform.position + attackCenterOffset + attackAreaOffset * attackAreaRange, attackAreaRadius, attackAreaMask);
 
         foreach (Collider2D target in targets)
         {
@@ -58,5 +72,11 @@ public class PlayerAttack : MonoBehaviour
                 damageable.ChangeHealth(-damage);
             }
         }
+    }
+
+    private void FinishAttack()
+    {
+        isAttacking = false;
+        playerController.MovementPaused = false;
     }
 }
