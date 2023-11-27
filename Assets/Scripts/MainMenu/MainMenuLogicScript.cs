@@ -2,11 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour
 {
     public GameObject setting;
     bool isOn = false;
+
+    public AudioSource AudioSource;
+
+    public Slider Slider;
+
+    private void Awake()
+    {
+        StaticVolumeValue.volume = Slider.value;
+    }
 
     public void play()
     {
@@ -25,6 +35,14 @@ public class NewBehaviourScript : MonoBehaviour
     }
 
 
+    private void Update()
+    {
+        StaticVolumeValue.volume = Slider.value;
+
+        AudioSource.volume = StaticVolumeValue.volume;
+        Debug.Log(AudioSource.volume);
+       
+    }
 
 
 
