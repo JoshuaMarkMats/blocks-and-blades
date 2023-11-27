@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: 99e6a225eb8781c4cad8e35e3ef2de37
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3289691182236810132
+    second: 11_26 - Aira; Move, Idle, Attacks_0
+  - first:
+      213: 719059732493488133
+    second: 11_26 - Aira; Move, Idle, Attacks_1
+  - first:
+      213: 3793653912461088247
+    second: 11_26 - Aira; Move, Idle, Attacks_2
+  - first:
+      213: 7535404626444907021
+    second: 11_26 - Aira; Move, Idle, Attacks_3
+  - first:
+      213: 2967801524616005238
+    second: 11_26 - Aira; Move, Idle, Attacks_4
+  - first:
+      213: -5522675308042815863
+    second: 11_26 - Aira; Move, Idle, Attacks_5
+  - first:
+      213: -8574234545068766784
+    second: 11_26 - Aira; Move, Idle, Attacks_6
+  - first:
+      213: -2334024996707601739
+    second: 11_26 - Aira; Move, Idle, Attacks_7
+  - first:
+      213: -3095708896781268755
+    second: 11_26 - Aira; Move, Idle, Attacks_8
+  - first:
+      213: -6253021909659812534
+    second: 11_26 - Aira; Move, Idle, Attacks_9
+  - first:
+      213: 2680495151378033029
+    second: 11_26 - Aira; Move, Idle, Attacks_10
+  - first:
+      213: 435278121940459255
+    second: 11_26 - Aira; Move, Idle, Attacks_11
+  - first:
+      213: -7222398699738840395
+    second: 11_26 - Aira; Move, Idle, Attacks_12
+  - first:
+      213: 8152255368873758181
+    second: 11_26 - Aira; Move, Idle, Attacks_13
+  - first:
+      213: 5294257622630206516
+    second: 11_26 - Aira; Move, Idle, Attacks_14
+  - first:
+      213: 1596044768644540397
+    second: 11_26 - Aira; Move, Idle, Attacks_15
+  - first:
+      213: -7253628090914260990
+    second: 11_26 - Aira; Move, Idle, Attacks_16
+  - first:
+      213: 7935706225476570514
+    second: 11_26 - Aira; Move, Idle, Attacks_17
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49bb5f163b457ad20800000000000000
+      internalID: 3289691182236810132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500df87540d9af900800000000000000
+      internalID: 719059732493488133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f5930d3224c5a430800000000000000
+      internalID: 3793653912461088247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d02751e5592239860800000000000000
+      internalID: 7535404626444907021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 676899633cfbf2920800000000000000
+      internalID: 2967801524616005238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 986794651148b53b0800000000000000
+      internalID: -5522675308042815863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c90b480c13320980800000000000000
+      internalID: -8574234545068766784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b27c56b1a0eb9fd0800000000000000
+      internalID: -2334024996707601739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de8065ff825d905d0800000000000000
+      internalID: -3095708896781268755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4dfdfdf3bdc839a0800000000000000
+      internalID: -6253021909659812534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5896b086328033520800000000000000
+      internalID: 2680495151378033029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe92cc452b6a0600800000000000000
+      internalID: 435278121940459255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2c2d306a2e4cb90800000000000000
+      internalID: -7222398699738840395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5edcdf3c011a22170800000000000000
+      internalID: 8152255368873758181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c0742f14bf87940800000000000000
+      internalID: 5294257622630206516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de7ada8c24a462610800000000000000
+      internalID: 1596044768644540397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208b244ceafe55b90800000000000000
+      internalID: -7253628090914260990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d036354ca412e60800000000000000
+      internalID: 7935706225476570514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed3f63bc9a30924f86e87091df3ba55
+      internalID: -1143779671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fc8583963dcc84eab4218b660439f2
+      internalID: -786141495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df867de4a0303a640b34aa5d1e76c4b5
+      internalID: -1308030662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Aira; Move, Idle, Attacks_21
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 64
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672f8394ef691df489242504bb4e9d69
+      internalID: -393678077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 114a61ffeb8dc8b468c2010ce68f332e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      11_26 - Aira; Move, Idle, Attacks_0: 3289691182236810132
+      11_26 - Aira; Move, Idle, Attacks_1: 719059732493488133
+      11_26 - Aira; Move, Idle, Attacks_10: 2680495151378033029
+      11_26 - Aira; Move, Idle, Attacks_11: 435278121940459255
+      11_26 - Aira; Move, Idle, Attacks_12: -7222398699738840395
+      11_26 - Aira; Move, Idle, Attacks_13: 8152255368873758181
+      11_26 - Aira; Move, Idle, Attacks_14: 5294257622630206516
+      11_26 - Aira; Move, Idle, Attacks_15: 1596044768644540397
+      11_26 - Aira; Move, Idle, Attacks_16: -7253628090914260990
+      11_26 - Aira; Move, Idle, Attacks_17: 7935706225476570514
+      11_26 - Aira; Move, Idle, Attacks_18: -1143779671
+      11_26 - Aira; Move, Idle, Attacks_19: -786141495
+      11_26 - Aira; Move, Idle, Attacks_2: 3793653912461088247
+      11_26 - Aira; Move, Idle, Attacks_20: -1308030662
+      11_26 - Aira; Move, Idle, Attacks_21: -393678077
+      11_26 - Aira; Move, Idle, Attacks_3: 7535404626444907021
+      11_26 - Aira; Move, Idle, Attacks_4: 2967801524616005238
+      11_26 - Aira; Move, Idle, Attacks_5: -5522675308042815863
+      11_26 - Aira; Move, Idle, Attacks_6: -8574234545068766784
+      11_26 - Aira; Move, Idle, Attacks_7: -2334024996707601739
+      11_26 - Aira; Move, Idle, Attacks_8: -3095708896781268755
+      11_26 - Aira; Move, Idle, Attacks_9: -6253021909659812534
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
