@@ -14,7 +14,7 @@ public class EnemyBase : MonoBehaviour, IDamageable
     [SerializeField]
     private int maxHealth = 10;
     [SerializeField]
-    private int currentHealth;
+    protected int currentHealth;
     [SerializeField]
     private HealthBar healthBar;
 
@@ -176,7 +176,9 @@ public class EnemyBase : MonoBehaviour, IDamageable
 
         //reset stagger effect
         staggerEffect.SetActive(false);
-        animator.SetTrigger(DEATH_TRIGGER);   
-        
+        animator.SetTrigger(DEATH_TRIGGER);
+
+        //safely pause movement
+        IsMovementPaused = true;
     }
 }
