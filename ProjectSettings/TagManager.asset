@@ -45,6 +45,9 @@ TagManager:
   - name: Effects
     uniqueID: 3535809555
     locked: 0
+  - name: HealthBar
+    uniqueID: 1190281113
+    locked: 0
   - name: InteractIcon
     uniqueID: 1636437619
     locked: 0
