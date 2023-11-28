@@ -44773,6 +44773,7 @@ GameObject:
   - component: {fileID: 1977490252}
   - component: {fileID: 1977490251}
   - component: {fileID: 1977490253}
+  - component: {fileID: 1977490254}
   m_Layer: 0
   m_Name: TerminalAccess
   m_TagString: Untagged
@@ -44821,7 +44822,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8750807122565193745, guid: 74cb5189a992dce4ca455c85b80f038c, type: 3}
+  m_Sprite: {fileID: 7034825772438446905, guid: 74cb5189a992dce4ca455c85b80f038c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -44895,6 +44896,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.9104018, y: 0.45162475}
   m_EdgeRadius: 0
+--- !u!95 &1977490254
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977490250}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 417db0e1019490742b78a536407852be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2089060113
 GameObject:
   m_ObjectHideFlags: 0

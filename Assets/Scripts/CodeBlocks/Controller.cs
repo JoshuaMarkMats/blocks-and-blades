@@ -71,6 +71,7 @@ public class Controller : MonoBehaviour
     private void RunNewFunction()
     {
         testValue = Random.Range(testLowerBound, testUpperBound);
+        inputDisplay.text = testValue.ToString();
         loop1 = new MainFunction(inputDisplay, outputDisplay, sequence, testValue);
         StartCoroutine(loop1.Play());        
     }

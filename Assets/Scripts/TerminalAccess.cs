@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class TerminalAccess : MonoBehaviour, IInteractable
 {
+    private const string SOLVED_TRIGGER = "solved";
+
     [SerializeField]
     private GameObject blockPuzzle;
     [SerializeField]
@@ -13,13 +15,14 @@ public class TerminalAccess : MonoBehaviour, IInteractable
 
     public UnityEvent puzzleSolved;
     private GameObject currentPuzzle;
-    private bool solved = false;
+    private Animator animator;
     [SerializeField]
     private bool isActive = false;
 
     private void Start()
     {
-        //puzzleSolved
+        animator = GetComponentInParent<Animator>();
+        puzzleSolved.AddListener(OnSolved);
     }
 
     public void OnInteract()
@@ -38,8 +41,9 @@ public class TerminalAccess : MonoBehaviour, IInteractable
         Destroy(currentPuzzle);
     }
 
-    private void Update()
+    public void OnSolved()
     {
+        animator.SetTrigger(SOLVED_TRIGGER);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
