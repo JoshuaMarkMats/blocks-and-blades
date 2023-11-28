@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,10 +110,10 @@ TextureImporter:
       name: 11_26 - Button + Barrier + Module_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 25
-        width: 24
-        height: 13
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,10 +131,10 @@ TextureImporter:
       name: 11_26 - Button + Barrier + Module_1
       rect:
         serializedVersion: 2
-        x: 84
-        y: 25
-        width: 24
-        height: 11
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,12 +152,12 @@ TextureImporter:
       name: 11_26 - Button + Barrier + Module_2
       rect:
         serializedVersion: 2
-        x: 127
+        x: 128
         y: 0
-        width: 194
+        width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,12 +173,12 @@ TextureImporter:
       name: 11_26 - Button + Barrier + Module_3
       rect:
         serializedVersion: 2
-        x: 335
-        y: 14
-        width: 34
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -190,10 +190,52 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 11_26 - Button + Barrier + Module_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a7b39c421399346b0b289020add242
+      internalID: 1452316820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_26 - Button + Barrier + Module_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e380eb8eb4a40549b19590e426ad5ae
+      internalID: -2025761656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6577f8610c0b91340b59d066ffb763a9
     internalID: 0
     vertices: []
     indices: 
@@ -205,6 +247,8 @@ TextureImporter:
       11_26 - Button + Barrier + Module_1: -8985824008069401202
       11_26 - Button + Barrier + Module_2: 8471541946207267827
       11_26 - Button + Barrier + Module_3: 6269997636475736619
+      11_26 - Button + Barrier + Module_4: 1452316820
+      11_26 - Button + Barrier + Module_5: -2025761656
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -29,5 +29,12 @@ public class CodeBlockManager : MonoBehaviour
 
     public Transform lastSelected;
 
+    public bool blockUnlocked = false;
+
     public const string HEAD_BLOCK = "HeadBlock";
+
+    public void EraseData()
+    {
+        blockUnlocked = false;
+    }
 }

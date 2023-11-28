@@ -46,12 +46,20 @@ public class Controller : MonoBehaviour
     private int completedTests = 0;
     private int testValue;
 
+    /*ONLY FOR DEMO*/
+    [SerializeField]
+    private GameObject unlockableBlock;
+
     void Start()
     {
         CodeBlockManager.Instance.codeBlockErrorEvent.AddListener(OpenErrorBox);
         solution = GetComponent<Solution>();
         isPlaying = 0;
         sequence = new List<FunctionBlock>();
+
+        /*ONLY FOR DEMO*/
+        if (CodeBlockManager.Instance.blockUnlocked)
+            unlockableBlock.SetActive(true);
     }
 
     public void Paly()

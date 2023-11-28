@@ -7,6 +7,7 @@ public class Chest : MonoBehaviour, IInteractable
 {
 
     private const string OPEN_TRIGGER = "open";
+    private const int OPENED_LAYER = 0;
 
     [SerializeField]
     private GameObject loot;
@@ -35,6 +36,7 @@ public class Chest : MonoBehaviour, IInteractable
     private void SpawnLoot()
     {
         loot.SetActive(true);
+        gameObject.layer = OPENED_LAYER;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

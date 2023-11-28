@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,7 +36,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
+        game_overEvent.AddListener(CodeBlockManager.Instance.EraseData);
+        game_winEvent.AddListener(CodeBlockManager.Instance.EraseData);
     }
 
    
