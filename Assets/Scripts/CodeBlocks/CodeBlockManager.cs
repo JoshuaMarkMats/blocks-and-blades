@@ -11,12 +11,7 @@ public class CodeBlockManager : MonoBehaviour
 {
     //custom event to get error type as parameter
     [Serializable]
-    public class CodeBlockErrorEvent : UnityEvent<CodeBlockErrorType> { };
-
-    public enum CodeBlockErrorType
-    {
-        VARIABLE_NOT_FOUND
-    }
+    public class CodeBlockErrorEvent : UnityEvent<string> { };
 
     public static CodeBlockManager Instance {get; private set;}
     private void Awake()
@@ -29,7 +24,8 @@ public class CodeBlockManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public CodeBlockErrorEvent codeBlockErrorEvent; 
+    public CodeBlockErrorEvent codeBlockErrorEvent;
+    public UnityEvent solvedEvent;
 
     public Transform lastSelected;
 

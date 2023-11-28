@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: f7fbc40cb4c7165408c4176f44589821
+guid: 2203ad7118d0ded4f88498103736f60d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7525916250621285084
-    second: run_and_exit_0
-  - first:
-      213: 1186338360984392022
-    second: run_and_exit_1
-  - first:
-      213: 6421707154088909427
-    second: run_and_exit_2
+      213: -6445830327266304636
+    second: Approved_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -57,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -78,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,52 +98,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: run_and_exit_0
+      name: Approved_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 34
-        width: 140
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd21f97b4fc617860800000000000000
-      internalID: 7525916250621285084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run_and_exit_1
-      rect:
-        serializedVersion: 2
-        x: 189
-        y: 34
-        width: 140
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 651d4ed2478b67010800000000000000
-      internalID: 1186338360984392022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run_and_exit_2
-      rect:
-        serializedVersion: 2
-        x: 371
+        x: 29
         y: 28
         width: 118
         height: 59
@@ -160,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 37add0b02ac7e1950800000000000000
-      internalID: 6421707154088909427
+      spriteID: 48d1ad4087fcb86a0800000000000000
+      internalID: -6445830327266304636
       vertices: []
       indices: 
       edges: []
@@ -177,9 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      run_and_exit_0: 7525916250621285084
-      run_and_exit_1: 1186338360984392022
-      run_and_exit_2: 6421707154088909427
+      Approved_0: -6445830327266304636
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -15,7 +15,7 @@ TagManager:
   - Player
   - Enemy
   - CameraConfiner
-  - 
+  - Interactable
   - 
   - 
   - 
@@ -44,4 +44,7 @@ TagManager:
     locked: 0
   - name: Effects
     uniqueID: 3535809555
+    locked: 0
+  - name: InteractIcon
+    uniqueID: 1636437619
     locked: 0

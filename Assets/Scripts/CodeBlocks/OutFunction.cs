@@ -14,13 +14,11 @@ public class OutFunction : FunctionBlock
         
         if (mainFunction.variables.ContainsKey(varName.text))
         {
-            Debug.Log($"Printing {varName.text}");
             mainFunction.outputDisplay.text = mainFunction.variables[varName.text].ToString();
         }
         else
         {
-            Debug.Log($"Variable {varName.text} not found");
-            CodeBlockManager.Instance.codeBlockErrorEvent.Invoke(CodeBlockManager.CodeBlockErrorType.VARIABLE_NOT_FOUND);
+            CodeBlockManager.Instance.codeBlockErrorEvent.Invoke($"{varName.text} does not exist.");
         }
             
     }
