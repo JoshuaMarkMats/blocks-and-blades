@@ -50,8 +50,8 @@ public class EnemyMeleeAttack : MonoBehaviour, IRPSAttacker
     {
 
         //Debug.Log($"enemy checking attack, attacking: {isAttacking}, attack type: {currentAttackType}");
-        //if player in range and not currently attacking and not staggered, randomly choose an attack
-        if (!isAttacking && !enemyController.IsStaggered && Physics2D.OverlapCircle((Vector2)transform.position + attackCenterOffset, detectionRange, attackAreaMask) != null)
+        //if player in range and not currently attacking and not staggered AND alive, randomly choose an attack
+        if (!isAttacking && !enemyController.IsStaggered && enemyController.IsAlive && Physics2D.OverlapCircle((Vector2)transform.position + attackCenterOffset, detectionRange, attackAreaMask) != null)
             AttackCheck((AttackType)Random.Range(0, 3));
     }
 

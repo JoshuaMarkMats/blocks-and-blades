@@ -44944,7 +44944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightAttackDamage: 5
-  heavyAttackDamage: 10
+  heavyAttackDamage: 8
   parryDamage: 3
   rpsWinDamageModifier: 1.5
   detectionRange: 0.99
@@ -45011,7 +45011,7 @@ MonoBehaviour:
   healthBar: {fileID: 432875109}
   baseSpeed: 0.07
   invincibleBlinkInterval: 0.1
-  timeInvincible: 2
+  timeInvincible: 0.5
   staggerDuration: 2
   staggerEffect: {fileID: 1559625489}
 --- !u!212 &4830960868558856592
@@ -45364,9 +45364,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 0.25
   lightAttackDamage: 5
-  heavyAttackDamage: 10
+  heavyAttackDamage: 8
   parryDamage: 3
-  rpsWinDamageModifier: 2
+  rpsWinDamageModifier: 1.6
   attackCenterOffset: {x: 0, y: 1}
   attackAreaRange: 0.5
   attackAreaRadius: 0.7

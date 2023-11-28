@@ -176,7 +176,9 @@ public class EnemyBase : MonoBehaviour, IDamageable
 
         //reset stagger effect
         staggerEffect.SetActive(false);
-        animator.SetTrigger(DEATH_TRIGGER);   
-        
+        animator.SetTrigger(DEATH_TRIGGER);
+
+        //safely pause movement
+        IsMovementPaused = true;
     }
 }
