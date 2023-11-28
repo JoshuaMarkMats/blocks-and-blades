@@ -4039,7 +4039,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!1 &1092575235
 GameObject:
@@ -7692,16 +7692,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -6, y: 6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -4, y: 6, z: 0}
     second:
       serializedVersion: 2
@@ -8488,7 +8478,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 9c3cb95467ce24d4b9f71bd1d65af2f4, type: 2}
   - m_RefCount: 26
     m_Data: {fileID: 11400000, guid: 6f3eaad8f009d4c46b388c5eacacc04c, type: 2}
-  - m_RefCount: 23
+  - m_RefCount: 22
     m_Data: {fileID: 11400000, guid: 416a34f566dcc1b47929c5a25078421d, type: 2}
   - m_RefCount: 39
     m_Data: {fileID: 11400000, guid: c522f2bfbe394ce4d9fbe64b4c2f5e71, type: 2}
@@ -8503,7 +8493,7 @@ Tilemap:
     m_Data: {fileID: 1796633461, guid: 87274049c0b48464e920f5cfc4c7dd68, type: 3}
   - m_RefCount: 26
     m_Data: {fileID: -3100445300442493460, guid: 87274049c0b48464e920f5cfc4c7dd68, type: 3}
-  - m_RefCount: 23
+  - m_RefCount: 22
     m_Data: {fileID: 6823716032538091694, guid: 87274049c0b48464e920f5cfc4c7dd68, type: 3}
   - m_RefCount: 39
     m_Data: {fileID: 1086344391, guid: 87274049c0b48464e920f5cfc4c7dd68, type: 3}
@@ -8514,7 +8504,7 @@ Tilemap:
   - m_RefCount: 10
     m_Data: {fileID: -8535703880465594514, guid: 695d3a3854e842d45ab659102e31dda3, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 412
+  - m_RefCount: 411
     m_Data:
       e00: 1
       e01: 0
@@ -8533,7 +8523,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 412
+  - m_RefCount: 411
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
