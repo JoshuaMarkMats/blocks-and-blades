@@ -18,12 +18,13 @@ public class PlayerController : MonoBehaviour, IDamageable
     private HealthBar healthBar;
     [SerializeField]
     private float baseSpeed = 0.1f;
-    [SerializeField]
-    private float invincibleBlinkInterval = 0.1f;  
+    [Space(0)]
 
     /* Invincibility */
+    [SerializeField]
+    private float invincibleBlinkInterval = 0.1f;     
+    public float timeInvincible = 0.3f;
     [Space(0)]
-    public float timeInvincible = 0.3f;   
 
     [SerializeField]
     private float staggerDuration = 1f;
@@ -69,7 +70,6 @@ public class PlayerController : MonoBehaviour, IDamageable
     {
         get { return playerAttack.CurrentAttackType; }
     }
-    
 
     void Start()
     {

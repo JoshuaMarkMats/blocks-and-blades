@@ -163,6 +163,10 @@ public class Controller : MonoBehaviour
         errorBox.Text = message;
     }
 
+    public void CloseTerminal()
+    {
+        terminalAccess.CloseTerminal();
+    }
 }
 
 public class MainFunction
