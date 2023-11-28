@@ -1,54 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TerminalAccess : MonoBehaviour, IInteractable
+public class Chest : MonoBehaviour, IInteractable
 {
-    private const string SOLVED_TRIGGER = "solved";
+
+    private const string OPEN_TRIGGER = "open";
 
     [SerializeField]
-    private GameObject blockPuzzle;
+    private GameObject loot;
     [SerializeField]
     private GameObject interactIcon;
 
     public UnityEvent puzzleSolved;
-    private GameObject currentPuzzle;
     private Animator animator;
     [SerializeField]
-    private bool isActive = false;
+    private bool isOpen = false;
 
-    private void Start()
+    private void Awake()
     {
-        animator = GetComponentInParent<Animator>();
-        puzzleSolved.AddListener(OnSolved);
+        animator = GetComponent<Animator>();
     }
 
     public void OnInteract()
     {
-        if (isActive)
+        if (isOpen)
             return;
-
-        isActive = true;
-        currentPuzzle = Instantiate(blockPuzzle);
-        currentPuzzle.GetComponentInChildren<Controller>().terminalAccess = this;
+        animator.SetTrigger(OPEN_TRIGGER);
+        isOpen = true;
+        interactIcon.SetActive(false);
     }
 
-    public void CloseTerminal()
+    private void SpawnLoot()
     {
-        isActive = false;
-        Destroy(currentPuzzle);
-    }
-
-    public void OnSolved()
-    {
-        animator.SetTrigger(SOLVED_TRIGGER);
+        loot.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isActive)
+        if (isOpen)
             return;
         if (collision.TryGetComponent<PlayerController>(out _))
             interactIcon.SetActive(true);
@@ -56,6 +47,8 @@ public class TerminalAccess : MonoBehaviour, IInteractable
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (isOpen)
+            return;
         if (collision.TryGetComponent<PlayerController>(out _))
             interactIcon.SetActive(false);
     }

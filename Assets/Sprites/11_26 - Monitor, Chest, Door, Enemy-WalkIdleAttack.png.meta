@@ -608,15 +608,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_16
+      name: ChestClosed_0
       rect:
         serializedVersion: 2
         x: 0
         y: 512
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -671,15 +671,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_19
+      name: ChestOpening_0
       rect:
         serializedVersion: 2
         x: 0
         y: 384
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -692,15 +692,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_20
+      name: ChestOpening_1
       rect:
         serializedVersion: 2
         x: 64
         y: 384
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -713,15 +713,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_21
+      name: ChestOpening_2
       rect:
         serializedVersion: 2
         x: 128
         y: 384
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -734,15 +734,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_22
+      name: ChestOpening_3
       rect:
         serializedVersion: 2
         x: 192
         y: 384
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -755,15 +755,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_23
+      name: ChestOpening_4
       rect:
         serializedVersion: 2
         x: 256
         y: 384
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -776,15 +776,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_24
+      name: ChestOpening_5
       rect:
         serializedVersion: 2
         x: 320
         y: 384
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1445,16 +1445,9 @@ TextureImporter:
       11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_13: 6718735262661752719
       11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_14: 7034825772438446905
       11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_15: 6580838679038128182
-      11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_16: -8544351559226490993
       11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_17: 8784664947817197419
       11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_18: 7676219957943873771
-      11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_19: 7461597538859445397
       11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_2: -1194999553356024014
-      11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_20: -4703322150934988275
-      11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_21: 3914208713047707774
-      11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_22: -7233660096664094612
-      11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_23: -6239834032070571948
-      11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_24: 4347968435954908275
       11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_3: 3695466751411668941
       11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_4: -6708574138153166738
       11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_5: -4362820608620496553
@@ -1462,6 +1455,13 @@ TextureImporter:
       11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_7: -4768132192026708186
       11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_8: -1359534258970237540
       11_26 - Monitor, Chest, Door, Enemy-WalkIdleAttack_9: 4980648381404171216
+      ChestClosed_0: -8544351559226490993
+      ChestOpening_0: 7461597538859445397
+      ChestOpening_1: -4703322150934988275
+      ChestOpening_2: 3914208713047707774
+      ChestOpening_3: -7233660096664094612
+      ChestOpening_4: -6239834032070571948
+      ChestOpening_5: 4347968435954908275
       Door_0: -1872542881496693566
       Door_1: -7057611015439795257
       Door_2: 284996309639486686
