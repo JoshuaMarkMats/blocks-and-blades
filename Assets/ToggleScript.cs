@@ -7,6 +7,7 @@ public class ToggleScript : MonoBehaviour
 {
     public GameObject GameObject;
     public GameObject GameObject2;
+    public GameObject GameObject3;
     bool toggle = false;
     static bool isPaused = false;
 
@@ -55,6 +56,18 @@ public class ToggleScript : MonoBehaviour
 
     public void ReturnMainMenu()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(0);
     }
+
+    public void OpenSettings()
+    {
+        GameObject3.SetActive(true);
+    }
+
+    public void CloseBox2()
+    {
+        GameObject3.SetActive(false);
+    }
+
 }
