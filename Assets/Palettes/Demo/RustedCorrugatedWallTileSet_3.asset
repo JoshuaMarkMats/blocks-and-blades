@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: RustedCorrugatedWallLeft
+  m_Name: RustedCorrugatedWallTileSet_3
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1086344391, guid: 87274049c0b48464e920f5cfc4c7dd68, type: 3}
+  m_Sprite: {fileID: -89641186, guid: d006942d15210584a9bf39ca37f9f9c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

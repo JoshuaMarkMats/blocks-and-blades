@@ -60,8 +60,8 @@ public class EnemyMeleeAttack : MonoBehaviour, IRPSAttacker
             if (detected != null)
             {
                 //if in line of sight, check attack
-                Vector2 vectorToTarget = (Vector2)detected.transform.position - attackCenter;
-                RaycastHit2D raycastHit = Physics2D.Raycast(attackCenter, vectorToTarget, vectorToTarget.magnitude, lineOfSightMask);
+                Vector2 vectorToTarget = (Vector2)detected.transform.position - (Vector2)transform.position;
+                RaycastHit2D raycastHit = Physics2D.Raycast(transform.position, vectorToTarget, vectorToTarget.magnitude, lineOfSightMask);
                 if (raycastHit.transform == detected.transform)
                     AttackCheck((AttackType)Random.Range(0, 3));
             }

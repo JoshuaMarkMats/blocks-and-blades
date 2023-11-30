@@ -117,8 +117,8 @@ public class PlayerAttack : MonoBehaviour, IRPSAttacker
                 continue;
 
             //if not in line of sight, skip
-            Vector2 vectorToTarget = (Vector2)target.transform.position - attackCenter;
-            RaycastHit2D raycastHit = Physics2D.Raycast(attackCenter, vectorToTarget, vectorToTarget.magnitude, lineOfSightMask);
+            Vector2 vectorToTarget = (Vector2)target.transform.position - (Vector2)transform.position;
+            RaycastHit2D raycastHit = Physics2D.Raycast(transform.position, vectorToTarget, vectorToTarget.magnitude, lineOfSightMask);
             if (raycastHit.transform != target.transform)
                 continue;
 
