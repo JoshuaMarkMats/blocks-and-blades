@@ -25,9 +25,12 @@ public class EnemyMeleeAttack : MonoBehaviour, IRPSAttacker
     private Vector2 attackCenterOffset = Vector2.up; //offset for center of attack stuff
     [SerializeField]
     private LayerMask attackAreaMask; //what can be attacked
+    [SerializeField]
+    private LayerMask lineOfSightMask; //what will block line of sight raycast
 
     public AttackType currentAttackType = AttackType.NONE;
     private Vector2 attackDirection;
+    private Vector2 attackCenter;
     private int damage = 10;
     private bool isAttacking = false;
     private Collider2D[] targets;
@@ -48,28 +51,41 @@ public class EnemyMeleeAttack : MonoBehaviour, IRPSAttacker
     }
     void Update()
     {
+        attackCenter = (Vector2)transform.position + attackCenterOffset;
 
-        //Debug.Log($"enemy checking attack, attacking: {isAttacking}, attack type: {currentAttackType}");
         //if player in range and not currently attacking and not staggered AND alive, randomly choose an attack
-        if (!isAttacking && !enemyController.IsStaggered && enemyController.IsAlive && Physics2D.OverlapCircle((Vector2)transform.position + attackCenterOffset, detectionRange, attackAreaMask) != null)
-            AttackCheck((AttackType)Random.Range(0, 3));
+        if (!isAttacking && !enemyController.IsStaggered && enemyController.IsAlive)
+        {
+            Collider2D detected = Physics2D.OverlapCircle(attackCenter, detectionRange, attackAreaMask);
+            if (detected != null)
+            {
+                //if in line of sight, check attack
+                Vector2 vectorToTarget = (Vector2)detected.transform.position - attackCenter;
+                RaycastHit2D raycastHit = Physics2D.Raycast(attackCenter, vectorToTarget, vectorToTarget.magnitude, lineOfSightMask);
+                if (raycastHit.transform == detected.transform)
+                    AttackCheck((AttackType)Random.Range(0, 3));
+            }
+
+            
+        }
+            
     }
 
     private void OnDrawGizmosSelected()
     {
         //attack areas
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere((Vector2)transform.position + attackCenterOffset + Vector2.left * attackAreaRange, attackAreaRadius);
-        Gizmos.DrawWireSphere((Vector2)transform.position + attackCenterOffset + Vector2.right * attackAreaRange, attackAreaRadius);
+        Gizmos.DrawWireSphere(attackCenter + Vector2.left * attackAreaRange, attackAreaRadius);
+        Gizmos.DrawWireSphere(attackCenter + Vector2.right * attackAreaRange, attackAreaRadius);
         //detection range
         Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere((Vector2)transform.position + attackCenterOffset, detectionRange);
+        Gizmos.DrawWireSphere(attackCenter, detectionRange);
     }
 
     private void AttackCheck(AttackType attackType)
     {
-        if (!enemyController.IsAlive)
-            return;
+        //if (!enemyController.IsAlive)
+            //return;
 
         isAttacking = true;
         enemyController.IsMovementPaused = true;
@@ -95,8 +111,9 @@ public class EnemyMeleeAttack : MonoBehaviour, IRPSAttacker
     private void Attack()
     {
         attackDirection = (enemyController.LookDirection < 0) ? Vector2.left : Vector2.right;
+        
 
-        targets = Physics2D.OverlapCircleAll((Vector2)transform.position + attackCenterOffset + attackDirection * attackAreaRange, attackAreaRadius, attackAreaMask);
+        targets = Physics2D.OverlapCircleAll(attackCenter + attackDirection * attackAreaRange, attackAreaRadius, attackAreaMask);
 
         foreach (Collider2D target in targets)
         {

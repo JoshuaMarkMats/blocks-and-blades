@@ -26,6 +26,8 @@ public class PlayerAttack : MonoBehaviour, IRPSAttacker
     private float attackAreaRadius = 2f; //radius of attack area
     [SerializeField]
     private LayerMask attackAreaMask;
+    [SerializeField]
+    private LayerMask lineOfSightMask;
 
     private PlayerController playerController;
     private Animator animator;
@@ -104,14 +106,21 @@ public class PlayerAttack : MonoBehaviour, IRPSAttacker
     private void Attack()
     {
         attackDirection = (playerController.LookDirection < 0) ? Vector2.left : Vector2.right;
+        Vector2 attackCenter = (Vector2)transform.position + attackCenterOffset;
 
-        targets = Physics2D.OverlapCircleAll((Vector2)transform.position + attackCenterOffset + attackDirection * attackAreaRange, attackAreaRadius, attackAreaMask);
+        targets = Physics2D.OverlapCircleAll(attackCenter + attackDirection * attackAreaRange, attackAreaRadius, attackAreaMask);
 
         foreach (Collider2D target in targets)
         {
             //if not damageable, skip
             if (!target.TryGetComponent<IDamageable>(out var damageable))
-                continue; 
+                continue;
+
+            //if not in line of sight, skip
+            Vector2 vectorToTarget = (Vector2)target.transform.position - attackCenter;
+            RaycastHit2D raycastHit = Physics2D.Raycast(attackCenter, vectorToTarget, vectorToTarget.magnitude, lineOfSightMask);
+            if (raycastHit.transform != target.transform)
+                continue;
 
             //if not RPS attacker, only deal damage
             if (!target.TryGetComponent<IRPSAttacker>(out var rpsAttacker))

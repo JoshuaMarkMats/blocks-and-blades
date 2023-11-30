@@ -139,25 +139,6 @@ public class Controller : MonoBehaviour
     //recursive parser function
     private List<FunctionBlock> TranslateCodeFromBlocks(FunctionBlock block, List<FunctionBlock> sequence_)
     {
-        /*foreach (Transform child in parent)
-        {
-            var functionName = child.name.Split('_'); //looks like a little face ^^
-
-            if (functionName[0] == "Function")
-            {
-                string function = functionName[1];
-                switch (function)
-                {
-                    case "Set":
-                        sequence_.Add(child.GetComponent<SetFunction>());
-                        break;
-                    case "Out":
-                        sequence_.Add(child.GetComponent<OutFunction>());
-                        break;
-
-                }
-            }
-        }*/
         sequence_.Add(block);
         if (block.nextBlock != null)
             return TranslateCodeFromBlocks(block.nextBlock, sequence_);

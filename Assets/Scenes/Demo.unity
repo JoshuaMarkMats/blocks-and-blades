@@ -630,7 +630,7 @@ Transform:
   m_GameObject: {fileID: 186717941}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.83, y: -3.58, z: -10}
+  m_LocalPosition: {x: 9.389483, y: -1.9116199, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -848,7 +848,7 @@ Transform:
   m_GameObject: {fileID: 225614292}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.83, y: -3.58, z: -10}
+  m_LocalPosition: {x: 14.08, y: -1.91, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9842,7 +9842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1679720159}
   - component: {fileID: 1679720158}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: CameraConfiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32984,7 +32984,7 @@ Transform:
   m_GameObject: {fileID: 135145377716678891}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.83, y: -3.58, z: 0}
+  m_LocalPosition: {x: 14.08, y: -1.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -33102,6 +33102,9 @@ MonoBehaviour:
   attackAreaMask:
     serializedVersion: 2
     m_Bits: 64
+  lineOfSightMask:
+    serializedVersion: 2
+    m_Bits: 65
   currentAttackType: 3
 --- !u!224 &4538112443003592693
 RectTransform:
@@ -33369,7 +33372,7 @@ Transform:
   m_GameObject: {fileID: 6695025378260991107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.67, y: 12.13, z: 0}
+  m_LocalPosition: {x: 11.43, y: 2.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -33680,10 +33683,13 @@ MonoBehaviour:
   rpsWinDamageModifier: 1.6
   attackCenterOffset: {x: 0, y: 1}
   attackAreaRange: 0.5
-  attackAreaRadius: 0.7
+  attackAreaRadius: 1
   attackAreaMask:
     serializedVersion: 2
     m_Bits: 128
+  lineOfSightMask:
+    serializedVersion: 2
+    m_Bits: 129
 --- !u!1 &7801284880007385462
 GameObject:
   m_ObjectHideFlags: 0
